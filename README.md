@@ -1,8 +1,8 @@
 # Environment Configuration
 
-This repository contains the details and configuration file to install all the Machine Learning / Deep Learning related dependencies of Python on Anaconda Environment.
+This repository contains the details and configuration file to install all the Deep Learning related dependencies of Python on Anaconda Environment. At present, the bare minimum libraries are provided in the configuration file `environment.yml`. As we will proceed further in the learning curve and as we will explore more libraries, we will keep them adding to the configuration file. Feel free to fork this repository and send a pull request whenever you would like to add suitable dependencies to the config file or would like to suggest additional environment setup related approaches.
 
-Per the Anaconda [docs](http://conda.pydata.org/docs):
+As per the Anaconda [docs](http://conda.pydata.org/docs):
 
 > Conda is an open source package management system and environment management system 
 for installing multiple versions of software packages and their dependencies and 
@@ -10,15 +10,16 @@ switching easily between them. It works on Linux, OS X and Windows, and was crea
 for Python programs but can package and distribute any software.
 
 ## Overview
-Using Anaconda consists of the following:
+We need to follow 3 simple steps to get our environment up and running:
 
-1. Install [`Anaconda`](https://www.continuum.io/downloads) on your computer from direct link or \\192.168.102.226 location.
+1. Install [`Anaconda`](https://www.continuum.io/downloads) on your computer from direct link or \\\\192.168.102.226 location.
 2. Follow the environment setup instructions below to create a new `conda` [environment](http://conda.pydata.org/docs/using/envs.html)
-3. Each time you wish to work, activate your `conda` environment
+3. Each time you wish to work, activate your `conda` environment. Easy peasy!
 
 ## Installation
 
 **Download** the version of `Anaconda` that matches your system from https://www.continuum.io/downloads
+Following versions are available on the site:
 
 |        | Linux | Mac | Windows | 
 |--------|-------|-----|---------|
@@ -27,7 +28,9 @@ Using Anaconda consists of the following:
 
 ## Create Environment
 
-**Setup** your `deep-learning-env` environment. Open the Anaconda terminal. Running the following commands will create a new `conda` environment that is provisioned with all libraries you need for deep-learning.
+**Pre-requisite:** You must have git installed in your system and added to the Path variable.
+
+**Setup:** Create one directory in your local system to clone this repository and open that directory in Ananconda prompt. Running the following commands will create a new `conda` environment that is provisioned with all libraries you need for deep-learning.
 
 ```sh
 git clone https://github.com/vishalsrangras/env-setup.git
@@ -41,7 +44,12 @@ conda env create -f environment.yml
 conda info --envs
 ```
 
-**Cleanup** downloaded libraries (remove tarballs, zip files, etc):
+You can alternatively also use:
+```sh
+conda envs list
+```
+
+**Cleanup** downloaded libraries (remove tarballs, zip files, etc) after the successful setup of environment:
 
 ```sh
 conda clean -tp
@@ -49,7 +57,7 @@ conda clean -tp
 
 ### Uninstalling 
 
-To uninstall the environment:
+To uninstall the environment from your machine, use the following command:
 
 ```sh
 conda env remove -n deep-learning-env
@@ -59,7 +67,7 @@ conda env remove -n deep-learning-env
 
 ## Using Anaconda
 
-Now that you have created an environment, in order to use it, you will need to activate the environment. This must be done **each** time you begin a new working session i.e. open a new terminal window. 
+Once the Anaconda environment is created, in order to use it, you will need to activate the environment. This must be done **each** time you begin a new working session i.e. open a new terminal window. 
 
 **Activate** the `deep-learning-env` environment:
 
@@ -72,6 +80,6 @@ $ source activate deep-learning-env
 $ activate deep-learning-env
 ```
 
-That's it. Now all of the `deep-learning-env` libraries are available.
+That's it. Now all of the `deep-learning-env` libraries are available at your disposal.
 
 To exit the environment when you have completed your work session, simply close the terminal window.
