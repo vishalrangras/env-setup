@@ -12,7 +12,7 @@ for Python programs but can package and distribute any software.
 ## Overview
 We need to follow 3 simple steps to get our environment up and running:
 
-1. Install [`Anaconda`](https://www.continuum.io/downloads) on your computer from direct link or \\\\192.168.102.226 location.
+1. Install [`Anaconda`](https://www.continuum.io/downloads) on your computer from direct link or \\\\192.168.102.226\\Software\\AI Community\\Software location if you are in the office network.
 2. Follow the environment setup instructions below to create a new `conda` [environment](http://conda.pydata.org/docs/using/envs.html)
 3. Each time you wish to work, activate your `conda` environment. Easy peasy!
 
@@ -46,7 +46,7 @@ conda info --envs
 
 You can alternatively also use:
 ```sh
-conda envs list
+conda env list
 ```
 
 **Cleanup** downloaded libraries (remove tarballs, zip files, etc) after the successful setup of environment:
