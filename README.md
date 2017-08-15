@@ -80,6 +80,15 @@ $ source activate deep-learning-env
 $ activate deep-learning-env
 ```
 
+**Test the environment**:
+
+```
+cd env-test
+jupyter notebook test.ipynb
+```
+
+Run all the code blocks in the test.ipynb notebook. If everything runs fine, you are good to start with your deep learning.
+
 That's it. Now all of the `deep-learning-env` libraries are available at your disposal.
 
 To exit the environment when you have completed your work session, simply close the terminal window.
